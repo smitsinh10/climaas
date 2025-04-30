@@ -3,24 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TempTracker</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Temp Tracker</title>
+    <link rel="stylesheet" href="./estilos.css" />
 </head>
 <body>
 
     <div class="contenedor">
         <div class="buscador">
-            <input type="text" id="input-ciudad" placeholder="Escribe una ciudad...">
-            <button onclick="buscarClima()">
-                <img src="buscar.png" alt="Buscar">
+            <input
+                type="text"
+                placeholder="Ingresa nombre de la ciudad"
+                spellcheck="false"
+                id="input-ciudad" <!-- ID corregido -->
+            />
+            <button onclick="obtenerClima()"> <!-- función corregida -->
+                <img src="imagenes/buscar.png" />
             </button>
         </div>
 
-        <div class="clima-info" id="clima-info">
-            <!-- Información del clima se muestra aquí -->
+        <div class="clima-info">
+            <p class="clima-texto">Parcialmente nublado</p>
+            <img src="imagenes/clima-ejemplo.webp" class="clima-icono" />
+            <h1 class="temp">22°C</h1>
+            <h2 class="ciudad">Huancayo</h2>
+
+            <div class="detalles">
+                <div class="col">
+                    <img src="imagenes/humedad.png" />
+                    <div>
+                        <p class="humedad">50%</p>
+                        <p>Humedad</p>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <img src="imagenes/viento.png" />
+                    <div>
+                        <p class="viento">15 km/h</p>
+                        <p>Viento</p>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </div>
 
-    <script src="app.js"></script> <!-- app.js es el principal -->
+    <!-- Cargamos el script al final para que el DOM esté listo -->
+    <script src="./codigo.js"></script>
 </body>
 </html>
